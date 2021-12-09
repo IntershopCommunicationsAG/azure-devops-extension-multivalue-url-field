@@ -1,13 +1,24 @@
-# URL Field - a custom work item control
+This is a fork of the [azure-devops-extension-url-field extension](https://github.com/krypu/azure-devops-extension-url-field) that can create multiple URLs based on multi-value-field values.
+
+# MultiValue URL Field - a custom work item control
 ## Azure DevOps extension
+
+### Create
+Install infos: https://docs.microsoft.com/en-us/azure/devops/extend/get-started/node?view=azure-devops
+1. Set `publisher` in `vss-extension.json` 
+2. `npm install vss-web-extension-sdk --save`
+3. `npm install -g tfx-cli`
+4. `npx tfx-cli extension create`
+5. Publish this extention : https://marketplace.visualstudio.com/manage/publishers 
 
 ### Usage
 
-This custom control allows you to add a clickable URL on your workitem form, that can optionally use another field as a variable in that URL. Depending on your needs, there are three different ways you can use this custom control extension:
+This custom control allows you to add multiple clickable URL on your workitem form, that use another field as a variable in that URL. Depending on your needs, there are four different ways you can use this custom control extension:
 
 1. A fixed static URL that is always the same for every workitem.
 2. A dynamic URL that combines a static base URL with some parametres taken from an other field.
 3. A manual URL that is fully based on an other field.
+4. Multiple dynamic URLs that combines a static base URL with some values taken from an multi-value-field.
 
 The typical scenario for this custom control is option number two, see the following example below:
 
